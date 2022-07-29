@@ -55,7 +55,7 @@ button {
   border-radius: 4px;
   padding: 5px 10px;
   color: #FEFCFD;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .bottom-box {
@@ -73,6 +73,12 @@ button {
   font-weight: 400;
 }
 
+.count-box span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
 .task-list {
   width: 50%;
   margin-top: 13px;
@@ -81,6 +87,7 @@ button {
 
 thead {
   font-size: 13px;
+  font-weight: 600;
 }
 
 .first-column {
