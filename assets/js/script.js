@@ -12,7 +12,8 @@ const addValue = document.querySelector(".addInput");
 
 addButton.addEventListener("click", () => {
   if(addValue.value === ""){
-    alert('Agrega un nombre para la tarea')
+    alert('Agrega un nombre para la tarea');
+    return;
   }
   if(tasks.length != 0) {
     const idMapping = tasks[tasks.length-1].id;
