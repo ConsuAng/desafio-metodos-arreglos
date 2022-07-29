@@ -23,13 +23,13 @@ addButton.addEventListener("click", () => {
     tasks.push(newTask);
   }
   addValue.value = "";
-  renderTask();
+  renderTasks();
 });
 
 deleteTask = (id) => {
   const taskIndex = tasks.findIndex((task) => task.id === id);
   tasks.splice(taskIndex, 1);
-  renderTask();
+  renderTasks();
 }
 
 changeStatus = (id) => {  
@@ -41,15 +41,15 @@ changeStatus = (id) => {
     const newObject = { id: tasks[taskIndex].id, name: tasks[taskIndex].name, completed: false };
     tasks.splice(taskIndex, 1, newObject);
   }
-  renderTask();
+  renderTasks();
 }
 
-const renderTask = () => {
+const renderTasks = () => {
   let html = "";
-  let html2 ="";
+  let inputCheck ="";
   let doneCount= [];
   for (const task of tasks) {
-    html2 = task.completed ? 
+    inputCheck = task.completed ? 
     `<input class="checkbox" type="checkbox" onclick="changeStatus(${task.id})" checked="true">`
     : `<input class="checkbox" type="checkbox" onclick="changeStatus(${task.id})" >`;
     html += `
@@ -57,7 +57,7 @@ const renderTask = () => {
         <td>${task.id}</td>
         <td class="name">${task.name}</td>
         <td><button class="delete" onclick="deleteTask(${task.id})"> x </button></td>
-        <td>${html2}</td>
+        <td>${inputCheck}</td>
       </tr> 
     `;
     if(task.completed === true) {
@@ -69,5 +69,5 @@ const renderTask = () => {
   done.innerHTML = doneCount.length;
 }
 
-renderTask();
+renderTasks();
 
