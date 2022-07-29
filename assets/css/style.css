@@ -45,7 +45,7 @@ hr {
   justify-content: space-between;
 }
 
-input {
+.addInput {
   width: 70%;
 }
 
@@ -55,7 +55,7 @@ button {
   border-radius: 4px;
   padding: 5px 10px;
   color: #FEFCFD;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .bottom-box {
@@ -73,10 +73,43 @@ button {
   font-weight: 400;
 }
 
-.head {
-  display: flex;
+.task-list {
+  width: 50%;
+  margin-top: 13px;
 }
 
-.head h3 {
+
+thead {
   font-size: 13px;
+}
+
+.first-column {
+  padding-right: 20px;
+}
+
+.second-column {
+  text-align: inherit;
+}
+
+.tasks {
+  width: 100%;
+  font-size: 13px;
+}
+
+.name {
+  padding-right: 15px;
+}
+
+.delete {
+  background-color: #7EC89F;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 7px;
+  color: #FEFCFD;
+  font-size: 14px;
+}
+
+.checkbox {
+  width: 19px;
+  height: 19px;
 }
